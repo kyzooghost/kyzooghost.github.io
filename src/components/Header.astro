@@ -1,0 +1,16 @@
+---
+import { siteConfig } from '../config';
+---
+
+<header class="site-header">
+  <a class="site-mark" href="/">{siteConfig.name}</a>
+  <nav aria-label="Primary navigation">
+    <ul class="site-nav">
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href={siteConfig.social.githubUrl} target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+      {siteConfig.social.xUrl && <li><a href={siteConfig.social.xUrl} target="_blank" rel="noopener noreferrer">X <span aria-hidden="true">↗</span></a></li>}
+      <li><a href={siteConfig.social.mediumUrl} target="_blank" rel="noopener noreferrer">Medium <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+</header>

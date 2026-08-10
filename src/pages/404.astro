@@ -1,0 +1,17 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found" description="The requested page could not be found." canonicalUrl={null}>
+  <div class="site-shell">
+    <Header />
+    <main class="page-shell not-found">
+      <p class="eyebrow">404</p>
+      <h1>That page is not here.</h1>
+      <p><a class="text-link" href="/">Return home <span aria-hidden="true">→</span></a></p>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

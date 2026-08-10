@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import { WORK_LINK_LABEL, WORK_TYPE_LABEL } from '../content/types';
+
+interface Props {
+  entry: CollectionEntry<'work'>;
+  index: number;
+}
+
+const { entry, index } = Astro.props;
+const { data } = entry;
+const href = data.externalUrl ?? '/work/' + entry.id;
+---
+
+<li class="work-item">
+  <span class="work-number" aria-hidden="true">{String(index).padStart(2, '0')}</span>
+  <div>
+    <p class="work-meta">{WORK_TYPE_LABEL[data.type]} · {data.publishedAt.getFullYear()}</p>
+    <h3 class="work-title">
+      <a href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>{data.title}</a>
+    </h3>
+    <p class="work-description">{data.description}</p>
+    <a class="text-link" href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>
+      {WORK_LINK_LABEL[data.type]}
+    </a>
+  </div>
+</li>

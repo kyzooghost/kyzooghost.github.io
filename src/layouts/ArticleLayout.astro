@@ -1,0 +1,38 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+  canonicalUrl?: string;
+}
+
+const { title, description, publishedAt, updatedAt, canonicalUrl } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl} ogType="article">
+  <div class="site-shell">
+    <Header />
+    <main class="article-shell">
+      <article class="article">
+        <header class="article-header">
+          <p class="eyebrow">Work</p>
+          <h1>{title}</h1>
+          <div class="article-meta">
+            <time datetime={publishedAt.toISOString()}>{publishedAt.getFullYear()}</time>
+            {updatedAt && <span>Updated {updatedAt.getFullYear()}</span>}
+          </div>
+          <p class="article-description">{description}</p>
+        </header>
+        <div class="article-body">
+          <slot />
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>
