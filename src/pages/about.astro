@@ -1,0 +1,24 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="How kyzooghost approaches technical decisions with security, financial, and product consequences.">
+  <div class="site-shell">
+    <Header />
+    <main class="page-shell page-copy">
+      <p class="eyebrow">About</p>
+      <h1>About</h1>
+      <p>I am a software engineer with a previous career in medicine.</p>
+      <p>I work on systems where technical decisions have important security, financial, and product consequences.</p>
+      <p>My work covers blockchain protocols, financial systems, distributed systems, and product security.</p>
+      <p>I am particularly interested in problems where several reasonable requirements conflict and there is no obviously correct design.</p>
+      <p>My approach is to make those constraints explicit, identify the important failure modes, and build enough evidence to make the decision clear.</p>
+      <h2>What I care about</h2>
+      <p>I am interested in building products that solve recurring and painful problems.</p>
+      <p>I particularly enjoy work where good engineering judgment can turn difficult infrastructure into something people can safely use.</p>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

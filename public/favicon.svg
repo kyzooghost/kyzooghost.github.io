@@ -1,0 +1,6 @@
+<!-- public/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">kyzooghost</title>
+  <rect width="32" height="32" rx="3" fill="#f5f1e8" />
+  <path d="M9 7v18M9 17 22 7M9 17l13 8" fill="none" stroke="#965a3c" stroke-width="2.5" stroke-linecap="square" />
+</svg>

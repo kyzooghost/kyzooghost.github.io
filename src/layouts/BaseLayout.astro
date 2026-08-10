@@ -1,0 +1,40 @@
+---
+import { siteConfig } from '../config';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string | null;
+  ogType?: 'website' | 'article';
+}
+
+const {
+  title = siteConfig.name,
+  description = siteConfig.description,
+  canonicalUrl = new URL(Astro.url.pathname, siteConfig.url).toString(),
+  ogType = 'website',
+} = Astro.props;
+
+const pageTitle = title === siteConfig.name ? title : title + ' - ' + siteConfig.name;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
