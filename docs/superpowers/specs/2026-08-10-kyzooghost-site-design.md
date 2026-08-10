@@ -66,3 +66,28 @@ Before opening the draft PR, verification will include dependency installation w
 ## Out of scope for v1
 
 RSS, reading-time calculation, syntax-highlighting customization, dark mode, a separate writing taxonomy, a CMS, a database, React/Vue, Tailwind, component libraries, and decorative motion are intentionally deferred until they solve a demonstrated need.
+
+## Grill-plan decision ledger
+
+### Human-owned decisions
+
+- External work entries link directly to their source; internal entries render through `/work/[slug]`.
+- The site remains a work-focused publication rather than introducing a separate blog section.
+- The identity stays pseudonymous and uses only the supplied copy and configured links.
+
+### Agent-owned decisions
+
+- Use the current official Astro content-collection conventions and deployment action versions available at implementation time.
+- Use Markdown for the initial internal article format; add MDX only when a real artifact requires it.
+- Omit the Medium artifact year if its publication metadata cannot be verified reliably.
+- Choose the smallest accessible CSS and metadata implementation that satisfies the approved visual contract.
+
+### Deferred implementation decisions
+
+- Exact CSS values, component prop shapes, file names beyond the approved structure, and test command details will be settled in the implementation plan and local verification.
+- GitHub Pages repository bootstrap details are operational work required to create a `main` base for the requested draft PR.
+
+### Residual risks
+
+- The external Medium page may not expose a stable publication date to a static build; the design explicitly permits omitting the year.
+- Browser-level visual inspection depends on local tooling availability; generated HTML, CSS, and build output remain the required verification baseline.
