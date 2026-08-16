@@ -37,6 +37,7 @@ h1 { max-width: 12ch; font-size: clamp(3rem, 8vw, 6.7rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
 h3 { font-size: 1.45rem; }
 .hero-copy { max-width: 40rem; margin: 2rem 0 2.25rem; color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.35rem); }
+.hero .text-link { display: inline-block; margin-top: 2.25rem; }
 .text-link { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
 .section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
 .section-heading { display: grid; grid-template-columns: minmax(8rem, 0.28fr) 1fr; gap: 2rem; align-items: baseline; margin-bottom: 2.5rem; }
