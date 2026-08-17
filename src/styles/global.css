@@ -40,7 +40,7 @@ h3 { font-size: 1.45rem; }
 .hero .text-link { display: inline-block; margin-top: 2.25rem; }
 .text-link { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
 .section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
-.section-heading { display: grid; grid-template-columns: minmax(8rem, 0.28fr) 1fr; gap: 2rem; align-items: baseline; margin-bottom: 2.5rem; }
+.section-heading { display: grid; grid-template-columns: max-content 1fr; gap: 2rem; align-items: baseline; margin-bottom: 2.5rem; }
 .section-heading p { max-width: 42rem; margin: 0; color: var(--muted); }
 .work-list { margin: 0; padding: 0; list-style: none; }
 .work-item { display: grid; grid-template-columns: 4rem minmax(0, 1fr); gap: 1.25rem; padding: 2rem 0 2.25rem; border-top: 1px solid var(--rule); }

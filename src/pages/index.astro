@@ -24,7 +24,6 @@ const work = (await getCollection('work', ({ data }) => !data.draft && data.feat
       <section class="section" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <h2 id="work-title">Selected work</h2>
-          <p>A small record of technical artifacts, decisions, and evidence.</p>
         </div>
         <ol class="work-list">
           {work.map((entry, index) => <WorkItem entry={entry} index={index + 1} />)}
