@@ -48,6 +48,7 @@ h3 { font-size: 1.45rem; }
 .work-meta { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.8rem; }
 .work-title { max-width: 26ch; font-size: clamp(1.65rem, 3vw, 2.5rem); }
 .work-description { max-width: 52ch; margin: 0.9rem 0 1.1rem; color: var(--muted); }
+.secondary-link { margin-left: 1rem; }
 .copy-block { max-width: var(--reading); }
 .copy-block p { margin: 0 0 1.25rem; }
 .page-copy { max-width: var(--reading); }
