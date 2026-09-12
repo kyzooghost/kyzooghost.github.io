@@ -1,6 +1,6 @@
 ---
 title: ETHGlobal Bangkok 2024 - Finalist
-description: "Zubernetes: container orchestration with ZK proofs and TEEs for verifiable cloud computing. Finalist amongst 700+ teams."
+description: "Zubernetes - container orchestration with ZK proofs and TEEs for verifiable cloud computing. Finalist amongst 700+ teams."
 publishedAt: 2024-11-17
 type: hackathon
 featured: true
