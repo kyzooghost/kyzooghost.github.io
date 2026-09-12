@@ -24,5 +24,10 @@ const href = data.externalUrl ?? '/work/' + entry.id;
     <a class="text-link" href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>
       {WORK_LINK_LABEL[data.type]}
     </a>
+    {data.secondaryUrl && (
+      <a class="text-link" href={data.secondaryUrl} target="_blank" rel="noopener noreferrer">
+        See announcement ↗
+      </a>
+    )}
   </div>
 </li>
