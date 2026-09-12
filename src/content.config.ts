@@ -29,6 +29,7 @@ const work = defineCollection({
     featured: z.boolean(),
     draft: z.boolean(),
     externalUrl: httpUrl.optional(),
+    secondaryUrl: httpUrl.optional(),
     tags: z.array(z.string()).optional(),
     canonicalUrl: httpUrl.optional(),
   }),
