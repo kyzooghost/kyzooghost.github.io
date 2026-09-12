@@ -52,6 +52,8 @@ When both links are shown, add `margin-left: 1rem` spacing on the secondary link
 | secondaryUrl | https://x.com/LineaBuild/status/2038641367035854875 |
 | tags | Solidity, Ethereum, L2, Staking, DeFi |
 
+**Writing voice:** Neutral technical prose with first-person bookends. Describe the system objectively (architecture, properties, audits). Use first-person only in the overview ("I drove...") and result section.
+
 **Body structure:**
 
 ### Overview
