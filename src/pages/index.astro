@@ -18,12 +18,12 @@ const work = (await getCollection('work', ({ data }) => !data.draft && data.feat
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">I turn unclear, high-stakes problems into products people trust.</h1>
-        <a class="text-link" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="#work">Portfolio <span aria-hidden="true">↓</span></a>
       </section>
 
       <section class="section" id="work" aria-labelledby="work-title">
         <div class="section-heading">
-          <h2 id="work-title">Selected work</h2>
+          <h2 id="work-title">Portfolio</h2>
         </div>
         <ol class="work-list">
           {work.map((entry, index) => <WorkItem entry={entry} index={index + 1} />)}
@@ -55,7 +55,7 @@ const work = (await getCollection('work', ({ data }) => !data.draft && data.feat
           <h2 id="contact-title">Contact</h2>
         </div>
         <div class="copy-block">
-          <p>I am interested in teams solving painful problems where strong engineering can create a meaningful product advantage.</p>
+          <p>I am interested in teams solving valuable problems where strong engineering can create a meaningful product advantage.</p>
           <ul class="contact-links" aria-label="Contact links">
             <li><a href={siteConfig.social.githubUrl} target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
             <li><a href={siteConfig.social.telegramUrl} target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a></li>
