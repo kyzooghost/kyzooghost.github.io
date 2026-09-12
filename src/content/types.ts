@@ -19,7 +19,7 @@ export type WorkType = (typeof WORK_TYPE_VALUES)[number];
 export const WORK_TYPE_LABEL: Record<WorkType, string> = {
   [WORK_TYPE.caseStudy]: 'Case study',
   [WORK_TYPE.externalArtifact]: 'External artifact',
-  [WORK_TYPE.earlierWriting]: 'Earlier technical writing',
+  [WORK_TYPE.earlierWriting]: 'Technical writing',
   [WORK_TYPE.project]: 'Project',
   [WORK_TYPE.hackathon]: 'Hackathon',
 };

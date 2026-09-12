@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-import { WORK_LINK_LABEL, WORK_TYPE, WORK_TYPE_LABEL } from '../content/types';
+import { WORK_LINK_LABEL, WORK_TYPE_LABEL } from '../content/types';
 
 const SHORT_MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] as const;
 
@@ -13,10 +13,7 @@ interface Props {
 const { entry, index } = Astro.props;
 const { data } = entry;
 const href = data.externalUrl ?? '/work/' + entry.id;
-const showMonth = data.type === WORK_TYPE.hackathon;
-const dateLabel = showMonth
-  ? `${SHORT_MONTH[data.publishedAt.getMonth()]} ${data.publishedAt.getFullYear()}`
-  : String(data.publishedAt.getFullYear());
+const dateLabel = `${SHORT_MONTH[data.publishedAt.getMonth()]} ${data.publishedAt.getFullYear()}`;
 ---
 
 <li class="work-item">
