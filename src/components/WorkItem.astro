@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-import { WORK_LINK_LABEL, WORK_TYPE_LABEL } from '../content/types';
+import { WORK_LINK_LABEL, WORK_TYPE, WORK_TYPE_LABEL } from '../content/types';
 
 const SHORT_MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] as const;
 
@@ -14,6 +14,7 @@ const { entry, index } = Astro.props;
 const { data } = entry;
 const href = data.externalUrl ?? '/work/' + entry.id;
 const dateLabel = `${SHORT_MONTH[data.publishedAt.getMonth()]} ${data.publishedAt.getFullYear()}`;
+const isHackathon = data.type === WORK_TYPE.hackathon;
 ---
 
 <li class="work-item">
@@ -24,14 +25,21 @@ const dateLabel = `${SHORT_MONTH[data.publishedAt.getMonth()]} ${data.publishedA
       <a href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>{data.title}</a>
     </h3>
     <p class="work-description">{data.description}</p>
-    {data.secondaryUrl ? (
+    {isHackathon && data.secondaryUrl ? (
       <a class="text-link" href={data.secondaryUrl} target="_blank" rel="noopener noreferrer">
         View X announcement ↗
       </a>
     ) : (
-      <a class="text-link" href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>
-        {WORK_LINK_LABEL[data.type]}
-      </a>
+      <>
+        <a class="text-link" href={href} target={data.externalUrl ? '_blank' : undefined} rel={data.externalUrl ? 'noopener noreferrer' : undefined}>
+          {WORK_LINK_LABEL[data.type]}
+        </a>
+        {data.secondaryUrl && (
+          <a class="text-link secondary-link" href={data.secondaryUrl} target="_blank" rel="noopener noreferrer">
+            View X announcement ↗
+          </a>
+        )}
+      </>
     )}
   </div>
 </li>
